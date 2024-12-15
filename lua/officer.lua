@@ -7,15 +7,6 @@ local M = {}
 function M.spawn_cmd(cmd, params)
   local overseer = require("overseer")
 
-  overseer.setup({
-  -- Configure the task list
-    task_list = {
-      -- Default direction. Can be "left", "right", or "bottom"
-      direction = "bottom",
-    }
-  })
-
-
   local components = config.get_components(params)
 
   local task = overseer.new_task({
@@ -23,6 +14,7 @@ function M.spawn_cmd(cmd, params)
     components = components,
     strategy = config.config.strategy
   })
+  overseer.open_output(task, "horizontal", true);
   task:start()
 end
 
