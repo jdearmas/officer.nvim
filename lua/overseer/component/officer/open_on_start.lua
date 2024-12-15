@@ -6,7 +6,7 @@ return {
     modifier = {
       desc = "Direction modifier for window created",
       type = "string",
-      default = "",
+      default = "horizontal",
     },
     close_on_exit = {
       desc = "Close the window on exit",
