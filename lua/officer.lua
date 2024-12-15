@@ -14,7 +14,7 @@ function M.spawn_cmd(cmd, params)
     components = components,
     strategy = config.config.strategy
   })
-  overseer.open_output(task, "horizontal", true);
+  task.open_output("horizontal");
   task:start()
 end
 
