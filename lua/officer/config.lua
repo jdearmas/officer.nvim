@@ -27,7 +27,7 @@ local function base_components(params)
     },
     {
       "officer.open_on_start",
-      modifier = "botright horizontal",
+      modifier = "horizontal",
       close_on_exit = params.bang and "always" or "never",
       size = function() return vim.o.columns * 0.4 end
     },
